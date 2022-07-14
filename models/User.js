@@ -1,4 +1,5 @@
 const { Schema, model }= require('mongoose');
+const router = require('../routes');
 const dateformat = require('../utils/dateFormat');
 
 // User Schema
@@ -44,3 +45,7 @@ const UserSchema = new Schema (
 UserSchema.virtual('friendCount').get(function(){
     return this.freinds.length;
 })
+
+const User = model('User', UserSchema);
+
+module.exports = User

@@ -36,7 +36,7 @@ const ReactionSchema = new Schema(
 
 // thought Schema
 
-const thoughtSchema = new Schema (
+const ThoughtSchema = new Schema (
     {
     
         thoughtText: {
@@ -66,3 +66,11 @@ const thoughtSchema = new Schema (
 
     }
 )
+//  get total of friends count
+ThoughtSchema.virtual('reactionCount').get(function(){
+    return this.reacations.length;
+})
+
+const thought = model('thought', ThoughtSchema);
+
+module.exports = thought
