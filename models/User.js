@@ -1,6 +1,4 @@
 const { Schema, model }= require('mongoose');
-const router = require('../routes/api');
-const dateformat = require('../utils/dateFormat');
 
 // User Schema
 
@@ -8,15 +6,16 @@ const UserSchema = new Schema (
     {
         username:{
             type: String,
-            trim: true,
+            required: 'Username is Required',
             unique: true,
-            required: true
+            trim: true
+           
         },
         email: {
             type: String,
-            required: true,
+            required: 'Email is Required',
             unique: true,
-            match: ['[a-z0-9]+@[a-z]+\.[a-z]{2,3}']
+            match: [/.+@.+\..+/]
         },
         thoughts: [
             {

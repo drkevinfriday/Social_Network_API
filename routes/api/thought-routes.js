@@ -12,5 +12,7 @@ const{
 
 router
     .route('/')
-    .get()
-    .post();
+    .get(getAllthought)
+    .post(createthought);
+
+module.exports = router;
