@@ -3,9 +3,8 @@ const router = require('express').Router();
 
 // import functions
 const{
-    createthought,
-    getAllthought
-}= require('../../controllers/thought-controller');
+
+}= require('../controllers/user-controller');
 
 
 // Set up the GET and Post route at api/thoughts

@@ -1,5 +1,5 @@
 const { Schema, model }= require('mongoose');
-const router = require('../routes');
+const router = require('../routes/api');
 const dateformat = require('../utils/dateFormat');
 
 // User Schema
