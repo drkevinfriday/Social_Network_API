@@ -57,12 +57,13 @@ const ThoughtSchema = new Schema (
             required: true,
         }, 
         // use Reaction Schema to validate for a reaction
-        reacations: [ReactionSchema]
+        reactions: [ReactionSchema]
     },
     {
         toJson: {
             getters: true
-        }
+        },
+        id: false
 
     }
 )
