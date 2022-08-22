@@ -41,7 +41,7 @@ const thougtController = {
    },
    
    updatethought(req, res) {
-    Thought.findByIdAndUpdate({_id: req.params._id}, body ,{new: true, runValidators: true})
+    Thought.findByIdAndUpdate({_id: req.params._id}, req.body ,{new: true, runValidators: true})
     .then(dbUserData => res.json(dbUserData))
     .catch(err=> {
         console.log(err)

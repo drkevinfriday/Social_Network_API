@@ -33,7 +33,7 @@ const userController = {
    },
 
    updateUser(req, res) {
-    User.findByIdAndUpdate({_id: req.params._id}, body ,{new: true, runValidators: true})
+    User.findByIdAndUpdate({_id: req.params._id}, req.body ,{new: true, runValidators: true})
     .then(dbUserData => res.json(dbUserData))
     .catch(err=> {
         console.log(err)
